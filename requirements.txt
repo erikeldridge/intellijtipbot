@@ -1,0 +1,11 @@
+Flask==0.9
+Jinja2==2.7
+MarkupSafe==0.18
+Werkzeug==0.8.3
+distribute==0.6.31
+gunicorn==0.17.4
+oauthlib==0.4.1
+requests==1.2.2
+requests-oauthlib==0.3.2
+twython==2.10.0
+wsgiref==0.1.2
