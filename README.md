@@ -1,6 +1,6 @@
 # Intellij tip bot
 
-The intellij tip bot tweets [intellij](http://www.jetbrains.com/idea/) usage tips.
+The intellij tip bot tweets [intellij](http://www.jetbrains.com/idea/) usage tips. Follow
 
 This bot is not operated by JetBrains.
 
@@ -23,26 +23,41 @@ Open an issue
 ## Set up
 
 1. Clone this repo
-1. Set up your environment as described in [Heroku's python set up documentation](https://devcenter.heroku.com/articles/python)
+1. Set up Heroku, as described in the [Heroku quickstart](https://devcenter.heroku.com/articles/quickstart)
+1. Create a Heroku app
+1. Set up your environment, as described in [Heroku's python set up documentation](https://devcenter.heroku.com/articles/python)
 
 ## Authenticate
 
+1. Create an application at [dev.twitter.com](https://dev.twitter.com)
+1. Click the "create OAuth access token"
 1. Create an _.env_ file, as described in [Heroku's configuration documentation](https://devcenter.heroku.com/articles/config-vars#local-setup)
-1. Create an oauth key/secret pair at dev.twitter.com
 1. Populate the _.env_ file as follows:
-    OAUTH_KEY=<your app key>
-    OAUTH_SECRET=<your app secret>
-    OAUTH_CALLBACK_URL=http://localhost:5000/auth/complete
-    OAUTH_TOKEN=<populated in the steps below>
-    OAUTH_TOKEN_SECRET=<populated in the steps below>
-1. Launch the app locally: `$ foreman start`
-1. Load http://localhost:5000/auth/start
-1. Follow the link and auth with Twitter
-1. After you're redirected back to your app, copy/paste the _oauth_token_ and _oauth_token_secret_ into your _.env_ file
+    CONSUMER_KEY=<your app's consumer key>
+    CONSUMER_SECRET=<your app's consumer secret>
+    ACCESS_TOKEN=<your app's access token>
+    ACCESS_TOKEN_SECRET=<your app's access token secret>
+1. Push your _.env_ settings to heroku: `$ heroku config:push`
 
-## Schedule tweet generator
+## Add tips
 
-## License
+1. Modify _tips.py_ to include your content
+1. Commit your changes and push them to your Heroku app
+
+## Test
+
+1. Export _.env_ vars: `for p in $(cat .env); do export $p; done`
+1. Generate tweet: `python bin/generator.py`
+
+*Note:* Twitter's status/update API docs state:
+    For each update attempt, the update text is compared with the authenticating user's recent tweets. Any attempt that would result in duplication will be blocked, resulting in a 403 error.
+
+## Schedule
+
+1. Add the [Scheduler add-on](https://devcenter.heroku.com/articles/scheduler) to your app
+1. Configure Scheduler to run `python bin/generator.py` at your desired rate
+
+# License
 
 Copyright 2013 Erik Eldridge
 
