@@ -1,6 +1,10 @@
 # Intellij tip bot
 
-The intellij tip bot tweets [intellij](http://www.jetbrains.com/idea/) usage tips. Follow
+The [intellij tip bot](https://twitter.com/intellijtipbot) tweets [intellij](http://www.jetbrains.com/idea/) usage tips.
+
+<iframe allowtransparency="true" frameborder="0" scrolling="no"
+  src="//platform.twitter.com/widgets/follow_button.html?screen_name=intellijtipbot"
+  style="width:300px; height:20px;"></iframe>
 
 This bot is not operated by JetBrains.
 
@@ -37,19 +41,23 @@ Open an issue
     CONSUMER_SECRET=<your app's consumer secret>
     ACCESS_TOKEN=<your app's access token>
     ACCESS_TOKEN_SECRET=<your app's access token secret>
-1. Push your _.env_ settings to heroku: `$ heroku config:push`
 
 ## Add tips
 
 1. Modify _tips.py_ to include your content
 1. Commit your changes and push them to your Heroku app
 
-## Test
+## Test locally
 
-1. Export _.env_ vars: `for p in $(cat .env); do export $p; done`
-1. Generate tweet: `python bin/generator.py`
+1. Export _.env_ vars: `for v in $(cat .env); do export $v; done`
+1. Generate tweet locally: `$ python bin/generator.py`
 
-*Note:* Twitter's status/update API docs state:
+## Test remotely
+
+1. Push your _.env_ settings to heroku: `$ heroku config:set $(cat .env)`
+1. Generate tweet: `$ python bin/generator.py`
+
+*Note:* duplicate tweets will be blocked, as described by Twitter's status/update API docs:
     For each update attempt, the update text is compared with the authenticating user's recent tweets. Any attempt that would result in duplication will be blocked, resulting in a 403 error.
 
 ## Schedule
