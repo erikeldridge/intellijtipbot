@@ -1,7 +1,8 @@
+import sys
 import os
 import json
 from twython import Twython
-from tips import tips
+sys.path.append('..'); from tips import tips
 from random import choice
 
 t = Twython(os.environ['CONSUMER_KEY'], os.environ['CONSUMER_SECRET'],
