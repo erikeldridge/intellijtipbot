@@ -2,10 +2,6 @@
 
 The [intellij tip bot](https://twitter.com/intellijtipbot) tweets [intellij](http://www.jetbrains.com/idea/) usage tips.
 
-<iframe allowtransparency="true" frameborder="0" scrolling="no"
-  src="//platform.twitter.com/widgets/follow_button.html?screen_name=intellijtipbot"
-  style="width:300px; height:20px;"></iframe>
-
 This bot is not operated by JetBrains.
 
 # Submitting tips
@@ -14,11 +10,11 @@ This bot is not operated by JetBrains.
 2. Add your tip
 3. Submit a pull request
 
-- or -
+\- or -
 
-Hit me up on twitter
+Hit [me](http://twitter.com/erikeldridge) up on twitter
 
-- or -
+\- or -
 
 Open an issue
 
