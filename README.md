@@ -2,8 +2,6 @@
 
 The [intellij tip bot](https://twitter.com/intellijtipbot) tweets [intellij](http://www.jetbrains.com/idea/) usage tips.
 
-This bot is not operated by JetBrains.
-
 # Submitting tips
 
 1. Clone the project
