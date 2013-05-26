@@ -33,6 +33,7 @@ Open an issue
 1. Click the "create OAuth access token"
 1. Create an _.env_ file, as described in [Heroku's configuration documentation](https://devcenter.heroku.com/articles/config-vars#local-setup)
 1. Populate the _.env_ file as follows:
+
         CONSUMER_KEY=<your app's consumer key>
         CONSUMER_SECRET=<your app's consumer secret>
         ACCESS_TOKEN=<your app's access token>
