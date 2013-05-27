@@ -20,7 +20,7 @@ Hit [me](http://twitter.com/erikeldridge) up on twitter
 
 Open an issue
 
-# Running your own tip bot
+# Maintaining and repurposing tip bot
 
 ## Set up
 
@@ -49,7 +49,7 @@ Open an issue
 ## Test locally
 
 1. Export _.env_ vars: `for v in $(cat .env); do export $v; done`
-1. Generate tweet locally: `$ python bin/generator.py`
+1. Generate tweet: `$ python bin/generator.py`
 
 ## Test remotely
 
@@ -66,7 +66,7 @@ Open an issue
 
 # License
 
-Copyright 2013 Erik Eldridge, and others
+Copyright 2013 Erik Eldridge and others
 
 Licensed under the MIT License
 
