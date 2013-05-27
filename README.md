@@ -6,8 +6,6 @@ The [IntelliJ tip bot](https://twitter.com/intellijtipbot) tweets [IntelliJ](htt
 
 Special thanks to [@moh](https://twitter.com/moh) (and contributors) for making his [IntelliJ shortcuts list](https://github.com/almalkawi/wiki/wiki/IntelliJ-IDEA-shortcuts) available.
 
-This bot is not operated by JetBrains.
-
 # Submitting tips
 
 1. Clone the project
@@ -56,9 +54,9 @@ Open an issue
 ## Test remotely
 
 1. Push your _.env_ settings to heroku: `$ heroku config:set $(cat .env)`
-1. Generate tweet: `$ python bin/generator.py`
+1. Generate tweet: `$ heroku run python bin/generator.py`
 
-*Note:* duplicate tweets will be blocked, as described by Twitter's status/update API docs:
+**Note:** duplicate tweets will be blocked, as described by Twitter's status/update API docs:
 > For each update attempt, the update text is compared with the authenticating user's recent tweets. Any attempt that would result in duplication will be blocked, resulting in a 403 error.
 
 ## Schedule
