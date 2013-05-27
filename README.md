@@ -1,6 +1,10 @@
 # Intellij tip bot
 
-The [intellij tip bot](https://twitter.com/intellijtipbot) tweets [intellij](http://www.jetbrains.com/idea/) usage tips.
+The [IntelliJ tip bot](https://twitter.com/intellijtipbot) tweets [IntelliJ](http://www.jetbrains.com/idea/) usage tips.
+
+**Note:** Many of these tips are specific to a keymap, e.g., _Mac OS X_, which may or may not be the one you use. I use the _Vim_ and _Mac OS X 10.5+_ keymaps, for example. If a given tip doesn't work with your settings, use the description to find the equivalent.
+
+Special thanks to [@moh](https://twitter.com/moh) (and contributors) for making his [IntelliJ shortcuts list](https://github.com/almalkawi/wiki/wiki/IntelliJ-IDEA-shortcuts) available.
 
 This bot is not operated by JetBrains.
 
@@ -64,7 +68,7 @@ Open an issue
 
 # License
 
-Copyright 2013 Erik Eldridge
+Copyright 2013 Erik Eldridge, and others
 
 Licensed under the MIT License
 
