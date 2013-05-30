@@ -1,7 +1,7 @@
 tips = [
     "alt + F1: show file in project tree",
     "F11: Creates an anonymous bookmark",
-    "Command+F11: Creates a bookmark with a mnemonic"
+    "Command+F11: Creates a bookmark with a mnemonic",
     "Shift+F11: Shows all bookmarks",
     "Ctrl+mnemonic: Jumps to a bookmark",
     "Command+} will move to the close bracket",
@@ -69,5 +69,4 @@ tips = [
     "Function Key (Fn) + Right Arrow: End (In macbook)",
     "Check out Help->Productivity Guide",
     "When debugging, F7: step into; F8: step over; Shift+F8: step out; F9: resume",
->>>>>>> Stashed changes
 ]
